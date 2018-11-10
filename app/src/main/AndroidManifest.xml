@@ -35,8 +35,9 @@
                 android:value="kevinlamcs.android.com.sikkainternchallenge.ui.main.MainActivity" />
         </activity>
         <activity
-            android:name=".ui.twitter.TwitterActivity"
-            android:label="@string/title_activity_twitter"
+            android:name=".ui.instagram.InstagramActivity"
+            android:label="@string/title_activity_instagram"
+            android:screenOrientation="portrait"
             android:parentActivityName=".ui.main.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

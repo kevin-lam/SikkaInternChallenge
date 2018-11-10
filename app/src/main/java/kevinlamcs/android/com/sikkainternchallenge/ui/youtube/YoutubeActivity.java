@@ -1,16 +1,19 @@
 package kevinlamcs.android.com.sikkainternchallenge.ui.youtube;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
+import butterknife.BindDrawable;
 import butterknife.BindString;
 import butterknife.BindView;
 import kevinlamcs.android.com.sikkainternchallenge.R;
@@ -29,8 +32,14 @@ public class YoutubeActivity extends BaseActivity implements YoutubeView {
     @BindView(R.id.coordinator_layout_youtube_listing)
     CoordinatorLayout coordinatorLayoutYoutubeListing;
 
+    @BindView(R.id.toolbar_logo)
+    ImageView toolbarLogo;
+
     @BindString(R.string.no_connection_message)
     String noConnectionMessage;
+
+    @BindDrawable(R.drawable.youtube_logo_monochrome)
+    Drawable youtubeLogo;
 
     @Inject
     LinearLayoutManager linearLayoutManager;
@@ -51,18 +60,23 @@ public class YoutubeActivity extends BaseActivity implements YoutubeView {
         setSupportActionBar(toolbarYoutube);
         setActionBarNoTitle();
         setBackButtonEnabled();
+        setToolbarLogo();
         setupRecyclerview();
+    }
+
+    private void setToolbarLogo() {
+        toolbarLogo.setImageDrawable(youtubeLogo);
+    }
+
+    private void setupRecyclerview() {
+        recyclerViewYoutubeListing.setLayoutManager(linearLayoutManager);
+        recyclerViewYoutubeListing.setAdapter(adapterYoutubeListing);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         loadPlaylist();
-    }
-
-    private void setupRecyclerview() {
-        recyclerViewYoutubeListing.setLayoutManager(linearLayoutManager);
-        recyclerViewYoutubeListing.setAdapter(adapterYoutubeListing);
     }
 
     @Override

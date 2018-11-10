@@ -23,5 +23,7 @@
     <color name="gray800">#424242</color>
     <color name="gray900">#212121</color>
 
+    <color name="black">@color/text87</color>
+
     <color name="colorImagePlaceHolder">@color/gray300</color>
 </resources>

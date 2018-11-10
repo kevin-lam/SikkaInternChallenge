@@ -3,19 +3,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/coordinator_layout_youtube_listing"
+    android:id="@+id/coordinator_layout_instagram_listing"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.youtube.YoutubeActivity">
+    tools:context=".ui.instagram.InstagramActivity">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_youtube_listing"
+        android:id="@+id/recyclerview_instagram_listing"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:itemCount="2"
-        tools:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        tools:layoutManager="android.support.v7.widget.GridLayoutManager" />
 
 </android.support.design.widget.CoordinatorLayout>

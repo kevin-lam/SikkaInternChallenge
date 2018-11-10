@@ -16,12 +16,16 @@ android {
             buildConfigField "String", "YOUTUBE_URL", "\"${YoutubeUrl}\""
             buildConfigField "String", "YOUTUBE_API_KEY", "\"${YoutubeAPIKey}\""
             buildConfigField "String", "CEO_PLAYLIST_ID", "\"${CeoPlaylistId}\""
+            buildConfigField "String", "INSTAGRAM_URL", "\"${InstagramUrl}\""
+            buildConfigField "String", "INSTAGRAM_TOKEN", "\"${InstagramToken}\""
         }
         release {
             minifyEnabled true
             buildConfigField "String", "YOUTUBE_URL", "\"${YoutubeUrl}\""
             buildConfigField "String", "YOUTUBE_API_KEY", "\"${YoutubeAPIKey}\""
             buildConfigField "String", "CEO_PLAYLIST_ID", "\"${CeoPlaylistId}\""
+            buildConfigField "String", "INSTAGRAM_URL", "\"${InstagramUrl}\""
+            buildConfigField "String", "INSTAGRAM_TOKEN", "\"${InstagramToken}\""
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -53,6 +57,7 @@ dependencies {
     implementation("com.github.bumptech.glide:recyclerview-integration:$rootProject.glideVersion") {
         transitive = false
     }
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
 
     // Networking
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"

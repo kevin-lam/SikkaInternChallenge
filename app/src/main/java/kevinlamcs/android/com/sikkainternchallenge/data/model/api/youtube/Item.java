@@ -70,6 +70,10 @@ public class Item {
         return snippet.getThumbnails() != null && snippet.getThumbnails().getHigh() != null && snippet.getThumbnails().getDefault() != null;
     }
 
+    public boolean hasVideoUrl() {
+        return snippet != null && snippet.getResourceId() != null && snippet.getResourceId().getVideoId() != null;
+    }
+
     public String getImageUrl() {
         return snippet.getThumbnails().getHigh().getUrl();
     }
@@ -78,4 +82,7 @@ public class Item {
         return snippet.getThumbnails().getDefault().getUrl();
     }
 
+    public String getVideoUrl() {
+        return snippet.getResourceId().getVideoId();
+    }
 }

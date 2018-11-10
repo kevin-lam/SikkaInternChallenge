@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="three_line_list_entry_image_height">72dp</dimen>
+    <dimen name="three_line_list_entry_image_width">72dp</dimen>
+    <dimen name="three_line_list_entry_margin_lr">16dp</dimen>
+    <dimen name="three_line_list_entry_margin_tb">16dp</dimen>
+</resources>

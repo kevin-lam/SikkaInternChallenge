@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SikkaInternChallenge</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_youtube">YoutubeActivity</string>
+    <string name="no_connection_message">You are not connected to the internet</string>
+    <string name="title_activity_twitter">TwitterActivity</string>
 </resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/youtube_entry_thumbnail"
+        android:layout_width="@dimen/three_line_list_entry_image_width"
+        android:layout_height="@dimen/three_line_list_entry_image_width"
+        android:layout_marginStart="@dimen/three_line_list_entry_margin_lr"
+        android:layout_marginEnd="@dimen/three_line_list_entry_margin_lr"
+        android:layout_marginTop="@dimen/three_line_list_entry_margin_tb"
+        android:layout_marginBottom="@dimen/three_line_list_entry_margin_tb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/thumbnail_text_divider"
+        android:src="@drawable/item_listing_entry_image_placeholder" />
+
+    <TextView
+        android:id="@+id/youtube_entry_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/thumbnail_text_divider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/youtube_entry_description"
+        android:layout_marginTop="@dimen/three_line_list_entry_margin_tb"
+        android:layout_marginEnd="@dimen/three_line_list_entry_margin_tb"
+        android:layout_marginBottom="@dimen/three_line_list_entry_margin_tb"
+        tools:text="Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e et dolore magna aliq"/>
+    
+    <TextView
+        android:id="@+id/youtube_entry_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/thumbnail_text_divider"
+        app:layout_constraintTop_toBottomOf="@id/youtube_entry_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/three_line_list_entry_margin_tb"
+        android:layout_marginEnd="@dimen/three_line_list_entry_margin_tb"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis. Risus feugiat in ante metus dictum at."/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/thumbnail_text_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="youtube_entry_thumbnail"/>
+</android.support.constraint.ConstraintLayout>
